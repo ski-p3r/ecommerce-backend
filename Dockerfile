@@ -24,7 +24,7 @@ RUN pnpm build
 EXPOSE 3000
 
 # Create a startup script
-RUN echo '#!/bin/sh\npnpm seed && pnpm start:prod' > /app/startup.sh && chmod +x /app/startup.sh
+RUN echo '#!/bin/sh\npnpm prisma:migrate && pnpm seed && pnpm start:prod' > /app/startup.sh && chmod +x /app/startup.sh
 
 # Start the application with the startup script
 CMD ["/app/startup.sh"]
