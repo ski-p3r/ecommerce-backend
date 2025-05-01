@@ -65,11 +65,11 @@ const swaggerOptions = {
     info: {
       title: "E-Commerce API",
       version: "1.0.0",
-      description: "A production-grade E-Commerce API",
+      description: "E-Commerce API",
     },
     servers: [
       {
-        url: "http://localhost:3000/api/v1",
+        url: "https://ecommerce-backend-tqgh.onrender.com/api/v1",
       },
     ],
   },
