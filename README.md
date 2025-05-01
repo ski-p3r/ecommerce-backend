@@ -53,33 +53,40 @@ A production-grade E-Commerce backend built with Express.js, TypeScript, Prisma,
 ### Installation
 
 1. Clone the repository:
+
    ```bash
-   git clone https://github.com/yourusername/ecommerce-backend.git
+   git clone https://github.com/ski-p3r/ecommerce-backend.git
    cd ecommerce-backend
    ```
 
 2. Install dependencies:
+
    ```bash
    pnpm install
    ```
 
 3. Set up environment variables:
+
    ```bash
    cp .env.example .env
    ```
+
    Edit the `.env` file with your configuration.
 
 4. Start the development environment:
+
    ```bash
    docker-compose up -d
    ```
 
 5. Run database migrations:
+
    ```bash
    pnpm prisma:migrate
    ```
 
 6. Seed the database with initial data:
+
    ```bash
    pnpm seed
    ```
@@ -96,6 +103,7 @@ pnpm test
 ```
 
 For watching mode:
+
 ```bash
 pnpm test:watch
 ```
@@ -292,9 +300,6 @@ EMAIL_PORT=2525
 EMAIL_USER=your_email_user
 EMAIL_PASS=your_email_password
 EMAIL_FROM=noreply@ecommerce.com
-
-# Frontend URL (for redirects)
-FRONTEND_URL=http://localhost:3000
 ```
 
 ## License
