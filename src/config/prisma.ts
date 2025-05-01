@@ -1,5 +1,4 @@
 import { PrismaClient } from "@prisma/client";
-import { logger } from "../utils/logger";
 
 // Prevent multiple instances of Prisma Client in development
 declare global {

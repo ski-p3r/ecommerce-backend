@@ -23,8 +23,5 @@ RUN pnpm build
 # Expose the port
 EXPOSE 3000
 
-# Create a startup script
-RUN echo '#!/bin/sh\npnpm prisma:migrate && pnpm seed && pnpm start:prod' > /app/startup.sh && chmod +x /app/startup.sh
-
-# Start the application with the startup script
-CMD ["/app/startup.sh"]
+# Start the application with seed then production start
+CMD sh -c "pnpm prisma:migrate && pnpm seed && pnpm start:prod"
